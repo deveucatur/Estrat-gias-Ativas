@@ -25,6 +25,14 @@ layout="centered")
 
 
 
+with st.sidebar:
+
+
+	st.info(listFrases[random.randint(0,9)][0])
+
+
+	st.write("---")
+	st.error("Idealizado por  [Cárin Pensin](https://www.linkedin.com/in/c%C3%A1rin-fab%C3%ADola-pensin-hahn/) e [Laís Raycik](https://www.linkedin.com/in/la%C3%ADs-raycik-68351946/)")
 
 
 st.image(Image.open(f'Identidade visual/logo UP.png'))
