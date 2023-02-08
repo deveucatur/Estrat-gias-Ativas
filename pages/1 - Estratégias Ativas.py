@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from PIL import Image
 import time
-
+import random
 import mysql.connector
 
 conexao = mysql.connector.connect(
@@ -21,6 +21,10 @@ st.set_page_config(
 page_title="UP| Estratégias Ativas",
 page_icon = icone,
 layout="centered")
+
+sql = 'SELECT * FROM Frases;'
+mycursor.execute(sql)
+listFrases = (mycursor.fetchall())
 
 with st.sidebar:
 

@@ -2,10 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import Image
-from openpyxl import load_workbook
-
-
-
+import random
 import mysql.connector
 
 conexao = mysql.connector.connect(
@@ -23,6 +20,9 @@ page_title="UP|Editar",
 page_icon = icone,
 layout="centered")
 
+sql = 'SELECT * FROM Frases;'
+mycursor.execute(sql)
+listFrases = (mycursor.fetchall())
 
 
 with st.sidebar:
